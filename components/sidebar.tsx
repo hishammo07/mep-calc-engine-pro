@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LayoutDashboard, Wind, Flame, Droplets, Waves } from "lucide-react";
-import { StandardToggle } from "./standard-provider";
 
 const items = [
   { href: "/", label: "Dashboard", Icon: LayoutDashboard },
@@ -18,9 +17,8 @@ export function Sidebar() {
     <aside className="no-print flex w-64 shrink-0 flex-col gap-6 border-r border-[#1e3357] bg-[#08111f] p-5">
       <div>
         <div className="text-lg font-bold text-[#f5a623]">MEP-Calc Engine Pro</div>
-        <div className="text-xs text-[#9fb2d1]">Design Standard</div>
+        <div className="text-xs text-[#9fb2d1]">Metric units — ECP</div>
       </div>
-      <StandardToggle />
       <nav className="flex flex-col gap-1">
         {items.map(({ href, label, Icon }) => (
           <Link

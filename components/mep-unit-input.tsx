@@ -1,10 +1,8 @@
 "use client";
 import { Dim, unitLabel } from "@/lib/unit-converter";
-import { useStandard } from "./standard-provider";
 
 export function MepUnitInput({ label, dim, value, onChange, error }: { label: string; dim: Dim; value: number; onChange: (n: number) => void; error?: string }) {
-  const { std } = useStandard();
-  const u = unitLabel(dim, std);
+  const u = unitLabel(dim);
   return (
     <label className="flex flex-col gap-1 text-xs text-[#9fb2d1]">
       {label}
